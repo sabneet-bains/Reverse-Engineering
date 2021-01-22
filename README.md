@@ -27,43 +27,40 @@ Visual Studio Code
 
 ## Usage
 
-1)	Open the project in **Visual Studio Code** > _run_ the server.py
+1)	Open the project in **Visual Studio Code** > _predefine_ the MIPS instructions in assembler.py
 
 ```python
-import sys, os
-from PyQt5 import QtCore, QtGui, QtWidgets, QtNetwork
 
-def Run_Server():
-    app = QtCore.QCoreApplication(sys.argv)
-    SOCKET = QtNetwork.QUdpSocket()
+instructions = [['addi', '$v0', '$zero', '0'], ['lw', '$t9', '0', '$a0']]
 
-    def Bind_Server(HOST = "127.0.0.1", PORT = 33002):
-        SOCKET.bind(QtNetwork.QHostAddress(HOST), PORT)
-
-    ..
-    ...
-    ....
-
-if __name__ == "__main__":
-    Run_Server()
-```
-
-2)	Using an additional terminal tab, _run_ the client.py
+.
+..
+...
 
 ```
-    >>  client.py █
+
+2)	Then, in a terminal tab, _run_ the assembler.py
+
+```
+    >>  assembler.py █
 ```
 
-3)	Make sure the client hostname and port match with the server specifications:
+3)	Likewise, specify the instructions in disassembler.py
 
 ```python
-    HOST = "127.0.0.1", PORT = 33002
+
+instructions = ['00000001101011100101100000100100', '10001101010010010000000000001000']
+
+.
+..
+...
+
 ```
 
-4)	Open another client session through the terminal and began messaging!
+4)	Then, in a terminal tab, _run_ the disassembler.py
 
 ```
-    >>  client.py █
+    >>  disassembler.py █
 ```
 
 ## Contributing
