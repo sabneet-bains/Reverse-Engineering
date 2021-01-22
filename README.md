@@ -39,13 +39,13 @@ instructions = [['addi', '$v0', '$zero', '0'], ['lw', '$t9', '0', '$a0']]
 
 ```
 
-2)	Then, in a terminal tab, _run_ the assembler.py
+2)	Then, in a terminal tab, _run_ the **assembler.py**
 
 ```
     >>  assembler.py █
 ```
 
-3)	Likewise, specify the instructions in disassembler.py
+3)	Likewise, specify the instructions in **disassembler.py**
 
 ```python
 
