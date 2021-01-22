@@ -2,7 +2,7 @@
 
 A repository of Python-based assemblers and disassemblers for a variety of CPU architectures.
 
-![](https://github.com/sabneet95/Texte-Messenger/blob/master/messaging.png)
+![](https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg)
 
 → `Currently, the main focus is on MIPS32/64 architecture, soon ARM-64 and x86 will be added.`
 
