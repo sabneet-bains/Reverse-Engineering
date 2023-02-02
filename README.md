@@ -8,11 +8,13 @@ A repository of Python-based assemblers and disassemblers for a variety of CPU a
 
 ## Requirements
 
-[Python 3.9.1 (64-bit) or above](https://www.python.org/downloads/)
+[Python 3.9.1 or later (64-bit)](https://www.python.org/downloads/)
 
 [MIPS Assembler and Runtime Simulator (Optional)](https://courses.missouristate.edu/KenVollmar/MARS/)
 
 ## Build Tested
+
+This project has been tested using the following setup:
 
 Visual Studio Code
 * Version: 1.52.1 (system setup)
@@ -45,7 +47,7 @@ instructions = [['addi', '$v0', '$zero', '0'], ['lw', '$t9', '0', '$a0']]
     >>  assembler.py █
 ```
 
-3)	Likewise, specify the instructions in **disassembler.py**
+3)	Similarly, specify the instructions in **disassembler.py**
 
 ```python
 
@@ -65,10 +67,7 @@ instructions = ['00000001101011100101100000100100', '100011010100100100000000000
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
+Contributions are welcome through pull requests. For major changes, please open an issue first to discuss the proposed changes. Don't forget to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+This repository is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License.
