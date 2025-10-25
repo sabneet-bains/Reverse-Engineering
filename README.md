@@ -1,138 +1,175 @@
-# Reverse Engineering - MIPS
+# 🔍 Reverse Engineering — MIPS Assembler & Disassembler  
 
-A collection of Python-based assemblers and disassemblers for various CPU architectures, with a current focus on MIPS32/64. This project is designed to help users understand reverse engineering by providing tools to convert assembly code to machine code and vice versa. Future plans include support for ARM-64 and x86 architectures.
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
+[![Architecture](https://img.shields.io/badge/Focus-MIPS32%2F64-lightgrey?logo=microchip&logoColor=white)](#)
+[![Reverse Engineering](https://img.shields.io/badge/Domain-Reverse_Engineering-orange?logo=github&logoColor=white)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-![Output Screenshot](output.jpg)
+<br>
 
-> **Note:** This project is primarily educational and may require further modifications for production use.
+**A Python-based educational toolkit for exploring instruction encoding, decoding, and ISA (Instruction Set Architecture) design.**  
 
----
+This repository provides modular **assemblers and disassemblers** for **MIPS32/64**, enabling students, engineers, and researchers to visualize how **assembly maps to binary machine code**—and how CPUs interpret and execute those bit fields.  
 
-## Table of Contents
+Planned extensions will introduce **ARM-64** and **x86-64** modules for comparative ISA analysis.
 
+<img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Output Screenshot" width="800">
+
+> *Note: This repository is designed for educational and research exploration and may require adaptation for production environments.*
+
+
+## 🧭 Table of Contents
 - [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Technical Background](#technical-background)
 - [Architecture](#architecture)
 - [Directory Structure](#directory-structure)
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Testing](#testing)
 - [Contributing](#contributing)
-- [License](#license)
 - [Future Work](#future-work)
+- [Author](#author)
+- [License](#license)
 
----
 
-## Overview
+## 🧩 Overview
 
-This repository provides Python-based tools for assembling and disassembling instructions for MIPS architectures. The current focus is on MIPS32/64, and upcoming updates will add support for ARM-64 and x86 architectures. The codebase includes:
+This repository implements **assembler and disassembler tools** for **MIPS32/64** architectures.  
+Each Python script demonstrates how instructions are parsed, encoded, and reconstructed, serving as a foundation for understanding instruction sets, binary translation, and reverse engineering.
 
-- **assembler.py**: Converts MIPS assembly instructions into machine code.
-- **disassembler.py**: Converts machine code back into human-readable assembly instructions.
+**Modules**
+- **`assembler.py`** → Encodes assembly mnemonics into binary machine code.  
+- **`disassembler.py`** → Decodes binary words into readable assembly.  
 
----
+Both emphasize clarity and modularity to make ISA study reproducible and extensible.
 
-## Architecture
 
-The project is designed with modularity in mind, allowing for easy extension to additional architectures. Each tool is implemented in a clear, straightforward manner to serve as an educational resource for reverse engineering and computer architecture concepts.
+## 🎓 Learning Objectives
 
----
+By using this toolkit, learners can:
 
-## Directory Structure
+- Translate **assembly instructions** into binary encodings at the bit level.  
+- Understand **R, I, and J instruction formats** within MIPS32/64.  
+- Explore **opcode, function code, and register field extraction**.  
+- Gain insight into **data paths, control signals, and pipeline instruction flow**.  
+- Extend assembler logic to **new opcodes** or **custom ISAs**, reinforcing hardware-software co-design concepts.
 
-- **assembler.py**: Python script for converting MIPS assembly instructions to machine code.
-- **disassembler.py**: Python script for converting MIPS machine code back to assembly instructions.
-- **output.jpg**: Sample image showcasing the output of the tools.
-- **LICENSE**: MIT License.
 
----
+## 🧮 Technical Background
 
-## Requirements
+MIPS instructions are fixed-length (32-bit) and partitioned into fields depending on the instruction format:
 
-- **Python 3.9.1 or later (64-bit):**  
-  [Download Python](https://www.python.org/)
+| Format | Bits | Example | Description |
+|---------|------|----------|--------------|
+| **R-Type** | `[31-26]=opcode`, `[25-21]=rs`, `[20-16]=rt`, `[15-11]=rd`, `[10-6]=shamt`, `[5-0]=funct` | `add $rd,$rs,$rt` | Register-to-register operations |
+| **I-Type** | `[31-26]=opcode`, `[25-21]=rs`, `[20-16]=rt`, `[15-0]=immediate` | `addi $rt,$rs,imm` | Immediate arithmetic / memory ops |
+| **J-Type** | `[31-26]=opcode`, `[25-0]=address` | `j target` | Jump instructions |
 
-- **MIPS Assembler and Runtime Simulator (Optional):**  
-  [MIPS Simulator](https://courses.missouristate.edu/) *(for testing and verification)*
+The assembler script constructs binary encodings by packing these bit fields using bitwise shifts and masks, while the disassembler unpacks them through right-shifts and logical AND operations.  
 
----
+Both modules rely on **opcode dictionaries** and **function tables** for efficient lookup and validation.
 
-## Usage
 
-1. **Clone the Repository:**
+## ⚙️ Architecture
 
-    ```bash
-    git clone https://github.com/sabneet95/Reverse-Engineering.git
-    ```
+The project is structured for modular experimentation:
 
-2. **Open the Project:**
+- **Opcode Dictionaries** — Mnemonics mapped to opcode and function values.  
+- **Encoding Layer** — Converts tokenized assembly into 32-bit binary strings using bit shifting.  
+- **Decoding Layer** — Extracts fields and resolves mnemonics using dictionary lookups.  
+- **Pipeline Context (educational)** — Demonstrates how these encodings would propagate through *IF → ID → EX → MEM → WB* stages in a MIPS pipeline, aiding instruction-level reasoning.  
+- **Extensibility** — Adding a new architecture requires defining its instruction formats and opcode tables.
 
-    Use an IDE such as [Visual Studio Code](https://code.visualstudio.com/) with Python extensions.
 
-3. **Running the Assembler:**
+## 📂 Directory Structure
 
-    - Edit `assembler.py` to define your MIPS instructions. For example:
-      ```python
-      instructions = [
-          ['addi', '$v0', '$zero', '0'],
-          ['lw', '$t9', '0', '$a0']
-      ]
-      ```
-    - Run the assembler from the terminal:
-      ```bash
-      python assembler.py
-      ```
+```
+Reverse-Engineering/
+├── assembler.py
+├── disassembler.py
+├── output.jpg
+├── LICENSE
+└── README.md
+```
 
-4. **Running the Disassembler:**
 
-    - Edit `disassembler.py` to define your machine code instructions. For example:
-      ```python
-      instructions = [
-          '00000001101011100101100000100100',
-          '10001101010010010000000000001000'
-      ]
-      ```
-    - Run the disassembler from the terminal:
-      ```bash
-      python disassembler.py
-      ```
+## 🧰 Requirements
 
----
+- **Python 3.9.1 or later (64-bit)**  
+  [Download Python](https://www.python.org/)  
+- *(Optional)* **MIPS Simulator / Runtime Environment**  
+  [MARS](https://courses.missouristate.edu/) — for testing assembled code.
 
-## Testing
 
-*Note: There are currently no automated tests integrated. Contributions to add a testing framework (e.g., using pytest) are welcome.*
+## 🚀 Usage
 
----
+### **Running the Assembler**
+1. Edit `assembler.py` to define your instructions:
+   ```python
+   instructions = [
+       ['addi', '$v0', '$zero', '0'],
+       ['lw', '$t9', '0', '$a0']
+   ]
+   ```
+2. Execute:
+   ```bash
+   python assembler.py
+   ```
 
-## Contributing
+### **Running the Disassembler**
+1. Edit `disassembler.py`:
+   ```python
+   instructions = [
+       '00000001101011100101100000100100',
+       '10001101010010010000000000001000'
+   ]
+   ```
+2. Execute:
+   ```bash
+   python disassembler.py
+   ```
 
-Contributions are welcome! To contribute:
+**Educational Tip:**  
+Modify an instruction and observe how specific bit segments change — this reveals how **register IDs, immediates, and opcodes** interact at the binary level.
 
-1. **Discuss Major Changes:**  
-   Open an issue to discuss proposed changes before submitting pull requests.
 
-2. **Follow Coding Standards:**  
-   Ensure your code is well-documented with clear inline comments and include tests where applicable.
+## 🧪 Testing
 
-3. **Submit Pull Requests:**  
-   Provide clear descriptions of your changes and ensure that any new features or fixes are tested.
+<details>
+<summary>Testing Status</summary>
 
----
+Automated testing is not yet integrated.  
+Planned tests include verifying instruction encodings, bit-field accuracy, and round-trip assembler ↔ disassembler equivalence.  
+A **pytest** suite will validate sample instructions across multiple architectures.
+</details>
 
-## License
 
-This repository is licensed under the [MIT License](LICENSE).
+## 🤝 Contributing
 
----
+1. Open an issue before implementing new features or ISAs.  
+2. Follow **PEP-8** and document encoding logic with inline bit masks.  
+3. Submit pull requests with example test cases and expected encodings.
 
-## Future Work
+> 💡 Contributions adding **ARM-64/x86 modules**, **bit-field visualizers**, or **pipeline simulators** are especially encouraged.
 
-Planned enhancements for this project include:
-- Adding support for ARM-64 and x86 architectures.
-- Integrating a testing framework for automated regression tests.
-- Expanding documentation with detailed examples, design rationale, and a project roadmap.
 
----
+## 🔮 Future Work
 
-*For further information or questions, please refer to the repository's issues or contact the maintainers directly.*
+- Integrate an automated testing framework.  
+- Extend support for **ARM-64** and **x86-64** architectures.  
+- Add **graphical visualization** for bit-field and control path mapping.  
+- Provide **Jupyter notebooks** with step-through assembly examples.  
+- Expand documentation with **opcode tables and timing diagrams**.
+
+
+## 👤 Author
+
+**Sabneet Bains** — *Quantum × AI × Scientific Computing*  
+[LinkedIn](https://www.linkedin.com/in/sabneet-bains/) • [GitHub](https://github.com/sabneet-bains)
+
+
+## 📄 License
+
+This repository is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
