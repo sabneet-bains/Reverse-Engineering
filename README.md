@@ -15,44 +15,24 @@
 
 <sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>
 
----
-
-> [!IMPORTANT]
-> **Star this repository ⭐** — you'll receive release notifications and support future educational tools instantly.
-
----
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet95/Reverse-Engineering)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
 
 </div>
 
-> [!TIP]
-> This is some tip text.
 
----
 
-<details>
-<summary><kbd>📖 Table of Contents</kbd></summary>
+## 🧭 Table of Contents
+- [Overview](#overview)
+- [Learning Objectives](#learning-objectives)
+- [Instruction Anatomy](#instruction-anatomy)
+- [Architecture & Design](#architecture--design)
+- [Quick Demo](#quick-demo)
+- [Conceptual Insights](#conceptual-insights)
+- [Extend & Compare](#extend--compare)
+- [Future Directions](#future-directions)
+- [Author](#author)
+- [License](#license)
 
-#### TOC
-
-- [📘 Overview](#-overview)
-- [🎯 Learning Objectives](#-learning-objectives)
-- [⚙️ Architecture & Design](#️-architecture--design)
-- [🧩 Instruction Anatomy](#-instruction-anatomy)
-- [🚀 Quick Demo](#-quick-demo)
-- [🧠 Conceptual Insights](#-conceptual-insights)
-- [🔄 Extend & Compare](#-extend--compare)
-- [🔬 Research Extensions](#-research-extensions)
-- [🧭 Educational Takeaways](#-educational-takeaways)
-- [👤 Author](#-author)
-- [📄 License](#-license)
-
----
-
-</details>
-
-───◉───────────────────────────────◉───
 
 ## 📘 Overview  
 
@@ -64,9 +44,13 @@ It translates assembly instructions into binary machine code — and back — al
 - Provides **bitwise transparency** for students of compilers, computer architecture, and systems engineering.  
 - Enables **educational visualization** of instruction encoding, ideal for self-study or teaching labs.  
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
+
 
 ## 🎯 Learning Objectives  
 
@@ -76,11 +60,16 @@ It translates assembly instructions into binary machine code — and back — al
 - Compare multiple ISAs (MIPS, ARM, x86) using a unified schema.  
 - Extend and test encoding rules programmatically.  
 
-> 💡 *Every instruction is a design decision, not just a syntax rule.*
+> [!TIP]
+> Every instruction is a design decision, not just a syntax rule.
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
+
 
 ## ⚙️ Architecture & Design  
 
@@ -99,9 +88,12 @@ Reverse-Engineering/
 - **Audit Trail:** Each operation is traceable—ideal for debugging or teaching.  
 - **Extensibility:** Add new architectures by defining tables and masks.  
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
 
 ## 🧩 Instruction Anatomy  
 
@@ -111,11 +103,16 @@ Reverse-Engineering/
 | **I-Type** | opcode, rs, rt, immediate | `addi $rt,$rs,imm` | `001000 10001 01001 0000000000000100` |
 | **J-Type** | opcode, address | `j target` | `000010 00000000000000000000010000` |
 
-> 🧮 Each field is a slot in a 32-bit grammar—compact, consistent, elegant.
+> [!NOTE]
+> Each field is a slot in a 32-bit grammar—compact, consistent, elegant.
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
+
 
 ## 🚀 Quick Demo  
 
@@ -155,11 +152,16 @@ and $t3, $t5, $t6
 lw $t1, 8($t2)
 ```
 
-> 🔍 *Single-bit changes = semantic transformations.*
+> [!IMPORTANT]
+> Single-bit changes = semantic transformations.
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
+
 
 ## 🧠 Conceptual Insights  
 
@@ -170,11 +172,15 @@ lw $t1, 8($t2)
 | **Hardware Empathy** | Understanding encodings enhances compiler design intuition. |
 | **Pedagogical Value** | Makes invisible CPU logic visible to learners. |
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
 
-## 🔄 Extend & Compare  
+</div>
+
+
+
+## ⚖️ Extend & Compare  
 
 | Goal | Action |
 |:-----|:--------|
@@ -183,11 +189,16 @@ lw $t1, 8($t2)
 | Compare Architectures | Add ARM/x86 support for cross-ISA insights |
 | Visualize Bitfields | Integrate ASCII/matplotlib visual encoders |
 
+> [!TIP]
 > ✨ *Turn binary patterns into stories of design trade-offs.*
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+
+</div>
+
+
 
 ## 🔬 Research Extensions  
 
@@ -196,42 +207,41 @@ lw $t1, 8($t2)
 - Integration with CPU simulators or FPGA boards.  
 - Automated correctness tests for student-built encoders.  
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+<div align="right">
 
-───◉───────────────────────────────◉───
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
 
-## 🧭 Educational Takeaways  
+</div>
+
+
+
+## 📌 Educational Takeaways  
 
 - Demonstrates **low-level transparency** in system design.  
 - Promotes **bottom-up understanding** of language → hardware translation.  
 - Provides a **codebase template** for teaching or experimentation.  
 
-<details>
-<summary><kbd>Expand for Instructor Use</kbd></summary>
+<div align="right">
 
-- Integrates easily into computer architecture or compiler courses.  
-- Supports lab demos, instruction field visualizations, and ISA comparisons.  
-- Encourages modular learning — modify one field, observe the effect.  
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
 
-</details>
+</div>
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-───◉───────────────────────────────◉───
+<div align="center">
 
-## 👤 Author  
+## 
 
+### 👤 Author  
 **Sabneet Bains**  
 *Quantum × AI × Scientific Computing*  
 [LinkedIn](https://www.linkedin.com/in/sabneet-bains/) • [GitHub](https://github.com/sabneet-bains)
 
----
 
-## 📄 License  
+## 
+### 📄 License  
 Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
 
----
 
-<div align="center">
 <sub>“Reverse engineering is not about undoing complexity—it’s about understanding design.”</sub>
 </div>
