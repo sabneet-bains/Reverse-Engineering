@@ -1,175 +1,237 @@
-# 🔍 Reverse Engineering — MIPS Assembler & Disassembler  
+<div align="center"><a name="readme-top"></a>
+
+# 🛠️ Reverse Engineering — MIPS Assembler & Disassembler  
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
 [![Architecture](https://img.shields.io/badge/Focus-MIPS32%2F64-lightgrey?logo=microchip&logoColor=white)](#)
-[![Reverse Engineering](https://img.shields.io/badge/Domain-Reverse_Engineering-orange?logo=github&logoColor=white)](#)
+[![Domain](https://img.shields.io/badge/Reverse_Engineering-orange?logo=github&logoColor=white)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-<br>
 
-**A Python-based educational toolkit for exploring instruction encoding, decoding, and ISA (Instruction Set Architecture) design.**  
+**Educational clarity × Professional precision**  
+*A modular Python toolkit that reveals how assembly instructions become machine logic—bridging syntax, semantics, and silicon.*
 
-This repository provides modular **assemblers and disassemblers** for **MIPS32/64**, enabling students, engineers, and researchers to visualize how **assembly maps to binary machine code**—and how CPUs interpret and execute those bit fields.  
+<img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Assembler Output" width="800">
 
-Planned extensions will introduce **ARM-64** and **x86-64** modules for comparative ISA analysis.
+<sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>
 
-<img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Output Screenshot" width="800">
+---
 
-> *Note: This repository is designed for educational and research exploration and may require adaptation for production environments.*
+> [!IMPORTANT]
+> **Star this repository ⭐** — you'll receive release notifications and support future educational tools instantly.
 
+---
 
-## 🧭 Table of Contents
-- [Overview](#overview)
-- [Learning Objectives](#learning-objectives)
-- [Technical Background](#technical-background)
-- [Architecture](#architecture)
-- [Directory Structure](#directory-structure)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [Future Work](#future-work)
-- [Author](#author)
-- [License](#license)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet95/Reverse-Engineering)
 
+</div>
 
-## 🧩 Overview
+> [!TIP]
+> This is some tip text.
 
-This repository implements **assembler and disassembler tools** for **MIPS32/64** architectures.  
-Each Python script demonstrates how instructions are parsed, encoded, and reconstructed, serving as a foundation for understanding instruction sets, binary translation, and reverse engineering.
+---
 
-**Modules**
-- **`assembler.py`** → Encodes assembly mnemonics into binary machine code.  
-- **`disassembler.py`** → Decodes binary words into readable assembly.  
+<details>
+<summary><kbd>📖 Table of Contents</kbd></summary>
 
-Both emphasize clarity and modularity to make ISA study reproducible and extensible.
+#### TOC
 
+- [📘 Overview](#-overview)
+- [🎯 Learning Objectives](#-learning-objectives)
+- [⚙️ Architecture & Design](#️-architecture--design)
+- [🧩 Instruction Anatomy](#-instruction-anatomy)
+- [🚀 Quick Demo](#-quick-demo)
+- [🧠 Conceptual Insights](#-conceptual-insights)
+- [🔄 Extend & Compare](#-extend--compare)
+- [🔬 Research Extensions](#-research-extensions)
+- [🧭 Educational Takeaways](#-educational-takeaways)
+- [👤 Author](#-author)
+- [📄 License](#-license)
 
-## 🎓 Learning Objectives
+---
 
-By using this toolkit, learners can:
+</details>
 
-- Translate **assembly instructions** into binary encodings at the bit level.  
-- Understand **R, I, and J instruction formats** within MIPS32/64.  
-- Explore **opcode, function code, and register field extraction**.  
-- Gain insight into **data paths, control signals, and pipeline instruction flow**.  
-- Extend assembler logic to **new opcodes** or **custom ISAs**, reinforcing hardware-software co-design concepts.
+───◉───────────────────────────────◉───
 
+## 📘 Overview  
 
-## 🧮 Technical Background
+This repository provides assembler and disassembler modules for **MIPS32/64** architectures.  
+It translates assembly instructions into binary machine code — and back — allowing you to *observe the CPU’s language at the bit level*.  
 
-MIPS instructions are fixed-length (32-bit) and partitioned into fields depending on the instruction format:
+### Why It Matters
+- Reveals the **data structures underlying ISA design**.  
+- Provides **bitwise transparency** for students of compilers, computer architecture, and systems engineering.  
+- Enables **educational visualization** of instruction encoding, ideal for self-study or teaching labs.  
 
-| Format | Bits | Example | Description |
-|---------|------|----------|--------------|
-| **R-Type** | `[31-26]=opcode`, `[25-21]=rs`, `[20-16]=rt`, `[15-11]=rd`, `[10-6]=shamt`, `[5-0]=funct` | `add $rd,$rs,$rt` | Register-to-register operations |
-| **I-Type** | `[31-26]=opcode`, `[25-21]=rs`, `[20-16]=rt`, `[15-0]=immediate` | `addi $rt,$rs,imm` | Immediate arithmetic / memory ops |
-| **J-Type** | `[31-26]=opcode`, `[25-0]=address` | `j target` | Jump instructions |
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-The assembler script constructs binary encodings by packing these bit fields using bitwise shifts and masks, while the disassembler unpacks them through right-shifts and logical AND operations.  
+───◉───────────────────────────────◉───
 
-Both modules rely on **opcode dictionaries** and **function tables** for efficient lookup and validation.
+## 🎯 Learning Objectives  
 
+- Decode and encode **R, I, and J instruction formats**.  
+- Explore **opcodes, funct codes, registers, and immediate values**.  
+- Understand how **binary encodings map to hardware logic**.  
+- Compare multiple ISAs (MIPS, ARM, x86) using a unified schema.  
+- Extend and test encoding rules programmatically.  
 
-## ⚙️ Architecture
+> 💡 *Every instruction is a design decision, not just a syntax rule.*
 
-The project is structured for modular experimentation:
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-- **Opcode Dictionaries** — Mnemonics mapped to opcode and function values.  
-- **Encoding Layer** — Converts tokenized assembly into 32-bit binary strings using bit shifting.  
-- **Decoding Layer** — Extracts fields and resolves mnemonics using dictionary lookups.  
-- **Pipeline Context (educational)** — Demonstrates how these encodings would propagate through *IF → ID → EX → MEM → WB* stages in a MIPS pipeline, aiding instruction-level reasoning.  
-- **Extensibility** — Adding a new architecture requires defining its instruction formats and opcode tables.
+───◉───────────────────────────────◉───
 
-
-## 📂 Directory Structure
+## ⚙️ Architecture & Design  
 
 ```
 Reverse-Engineering/
-├── assembler.py
-├── disassembler.py
-├── output.jpg
-├── LICENSE
+├── assembler.py        # Assembly → Binary encoder
+├── disassembler.py     # Binary → Assembly decoder
+├── opcode_tables/      # Mnemonics & function maps
+├── examples/           # Round-trip tests and cases
 └── README.md
 ```
 
+**Core Components**
+- **Encoding Layer:** Converts assembly mnemonics into 32-bit binary sequences.  
+- **Decoding Layer:** Extracts bitfields and reconstructs readable instructions.  
+- **Audit Trail:** Each operation is traceable—ideal for debugging or teaching.  
+- **Extensibility:** Add new architectures by defining tables and masks.  
 
-## 🧰 Requirements
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-- **Python 3.9.1 or later (64-bit)**  
-  [Download Python](https://www.python.org/)  
-- *(Optional)* **MIPS Simulator / Runtime Environment**  
-  [MARS](https://courses.missouristate.edu/) — for testing assembled code.
+───◉───────────────────────────────◉───
 
+## 🧩 Instruction Anatomy  
 
-## 🚀 Usage
+| Format | Fields | Example | Bit Mapping |
+|:-------|:--------|:---------|:-------------|
+| **R-Type** | opcode, rs, rt, rd, shamt, funct | `add $rd,$rs,$rt` | `000000 10001 10010 01001 00000 100000` |
+| **I-Type** | opcode, rs, rt, immediate | `addi $rt,$rs,imm` | `001000 10001 01001 0000000000000100` |
+| **J-Type** | opcode, address | `j target` | `000010 00000000000000000000010000` |
 
-### **Running the Assembler**
-1. Edit `assembler.py` to define your instructions:
-   ```python
-   instructions = [
-       ['addi', '$v0', '$zero', '0'],
-       ['lw', '$t9', '0', '$a0']
-   ]
-   ```
-2. Execute:
-   ```bash
-   python assembler.py
-   ```
+> 🧮 Each field is a slot in a 32-bit grammar—compact, consistent, elegant.
 
-### **Running the Disassembler**
-1. Edit `disassembler.py`:
-   ```python
-   instructions = [
-       '00000001101011100101100000100100',
-       '10001101010010010000000000001000'
-   ]
-   ```
-2. Execute:
-   ```bash
-   python disassembler.py
-   ```
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-**Educational Tip:**  
-Modify an instruction and observe how specific bit segments change — this reveals how **register IDs, immediates, and opcodes** interact at the binary level.
+───◉───────────────────────────────◉───
 
+## 🚀 Quick Demo  
 
-## 🧪 Testing
+### Assemble Instructions
+```bash
+python assembler.py
+```
+
+**Example**
+```python
+instructions = [
+    ['addi', '$v0', '$zero', '4'],
+    ['lw', '$t9', '0', '$a0']
+]
+```
+**Output**
+```
+00100000000000100000000000000100
+10001101010010010000000000001000
+```
+
+### Disassemble Binary
+```bash
+python disassembler.py
+```
+
+**Example**
+```python
+instructions = [
+    '00000001101011100101100000100100',
+    '10001101010010010000000000001000'
+]
+```
+**Output**
+```
+and $t3, $t5, $t6
+lw $t1, 8($t2)
+```
+
+> 🔍 *Single-bit changes = semantic transformations.*
+
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+───◉───────────────────────────────◉───
+
+## 🧠 Conceptual Insights  
+
+| Theme | Key Takeaway |
+|:------|:--------------|
+| **Bit-Level Determinism** | Machine code is structured data—minimal yet expressive. |
+| **Round-Trip Verification** | Disassembly validates correctness—every mapping is bidirectional. |
+| **Hardware Empathy** | Understanding encodings enhances compiler design intuition. |
+| **Pedagogical Value** | Makes invisible CPU logic visible to learners. |
+
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+───◉───────────────────────────────◉───
+
+## 🔄 Extend & Compare  
+
+| Goal | Action |
+|:-----|:--------|
+| Add new ISA | Define opcode/function maps in `architectures/` |
+| Automate Tests | Implement pytest round-trip assertions |
+| Compare Architectures | Add ARM/x86 support for cross-ISA insights |
+| Visualize Bitfields | Integrate ASCII/matplotlib visual encoders |
+
+> ✨ *Turn binary patterns into stories of design trade-offs.*
+
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+───◉───────────────────────────────◉───
+
+## 🔬 Research Extensions  
+
+- Visual disassembly pipelines for compiler education.  
+- Interactive Jupyter notebooks showing opcode heatmaps.  
+- Integration with CPU simulators or FPGA boards.  
+- Automated correctness tests for student-built encoders.  
+
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+───◉───────────────────────────────◉───
+
+## 🧭 Educational Takeaways  
+
+- Demonstrates **low-level transparency** in system design.  
+- Promotes **bottom-up understanding** of language → hardware translation.  
+- Provides a **codebase template** for teaching or experimentation.  
 
 <details>
-<summary>Testing Status</summary>
+<summary><kbd>Expand for Instructor Use</kbd></summary>
 
-Automated testing is not yet integrated.  
-Planned tests include verifying instruction encodings, bit-field accuracy, and round-trip assembler ↔ disassembler equivalence.  
-A **pytest** suite will validate sample instructions across multiple architectures.
+- Integrates easily into computer architecture or compiler courses.  
+- Supports lab demos, instruction field visualizations, and ISA comparisons.  
+- Encourages modular learning — modify one field, observe the effect.  
+
 </details>
 
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
 
-## 🤝 Contributing
+───◉───────────────────────────────◉───
 
-1. Open an issue before implementing new features or ISAs.  
-2. Follow **PEP-8** and document encoding logic with inline bit masks.  
-3. Submit pull requests with example test cases and expected encodings.
+## 👤 Author  
 
-> 💡 Contributions adding **ARM-64/x86 modules**, **bit-field visualizers**, or **pipeline simulators** are especially encouraged.
-
-
-## 🔮 Future Work
-
-- Integrate an automated testing framework.  
-- Extend support for **ARM-64** and **x86-64** architectures.  
-- Add **graphical visualization** for bit-field and control path mapping.  
-- Provide **Jupyter notebooks** with step-through assembly examples.  
-- Expand documentation with **opcode tables and timing diagrams**.
-
-
-## 👤 Author
-
-**Sabneet Bains** — *Quantum × AI × Scientific Computing*  
+**Sabneet Bains**  
+*Quantum × AI × Scientific Computing*  
 [LinkedIn](https://www.linkedin.com/in/sabneet-bains/) • [GitHub](https://github.com/sabneet-bains)
 
+---
 
-## 📄 License
+## 📄 License  
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
 
-This repository is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+---
 
+<div align="center">
+<sub>“Reverse engineering is not about undoing complexity—it’s about understanding design.”</sub>
+</div>
