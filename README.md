@@ -7,6 +7,7 @@
 [![Domain](https://img.shields.io/badge/Reverse_Engineering-orange?logo=github&logoColor=white)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
+<br>
 
 **Educational clarity × Professional precision**  
 *A modular Python toolkit that reveals how assembly instructions become machine logic—bridging syntax, semantics, and silicon.*
@@ -22,16 +23,18 @@
 
 
 ## 🧭 Table of Contents
-- [Overview](#overview)
-- [Learning Objectives](#learning-objectives)
-- [Instruction Anatomy](#instruction-anatomy)
-- [Architecture & Design](#architecture--design)
-- [Quick Demo](#quick-demo)
-- [Conceptual Insights](#conceptual-insights)
-- [Extend & Compare](#extend--compare)
-- [Future Directions](#future-directions)
-- [Author](#author)
-- [License](#license)
+- [Overview](#-overview)
+- [Learning Objectives](#-learning-objectives)
+- [Architecture & Design](#️-architecture--design)
+- [Instruction Anatomy](#-instruction-anatomy)
+- [Quick Demo](#-quick-demo)
+- [Conceptual Insights](#-conceptual-insights)
+- [Extend & Compare](#️-extend--compare)
+- [Research Extensions](#-research-extensions)
+- [Educational Takeaways](#-educational-takeaways)
+- [Contributing](#-contributing)
+- [Author](#-author)
+- [License](#-license)
 
 
 ## 📘 Overview  
@@ -46,7 +49,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -65,7 +68,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -90,7 +93,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -108,7 +111,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -157,7 +160,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -174,7 +177,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -194,7 +197,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
@@ -209,11 +212,9 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
-
-
 
 ## 📌 Educational Takeaways  
 
@@ -223,10 +224,34 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-151515?)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
 
 </div>
 
+## 🤝 Contributing  
+
+Contributions are welcome — whether you’re improving documentation, adding test coverage, or extending ISA support.
+
+**How to Contribute**
+1. **Fork** the repository and create a feature branch.  
+2. Follow **PEP-8** and include inline comments for bit-level logic.  
+3. Add **example instructions** and expected outputs for new opcodes or formats.  
+4. Open a **pull request** describing your changes and rationale.
+
+> [!TIP]
+> Contributions expanding the assembler/disassembler to **ARM-64** or **x86-64**, or adding **visualization tools** (bitfield diagrams, pipeline simulators) are especially encouraged.
+
+<br>
+
+**Code of Conduct**  
+This project follows the [Contributor Covenant](https://www.contributor-covenant.org/).  
+Please maintain a respectful and collaborative tone in all interactions.
+
+<div align="right">
+
+[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+
+</div>
 
 <div align="center">
 
