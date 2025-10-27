@@ -5,8 +5,9 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
 [![Architecture](https://img.shields.io/badge/Focus-MIPS32%2F64-lightgrey?logo=microchip&logoColor=white)](#)
 [![Domain](https://img.shields.io/badge/Reverse_Engineering-orange?logo=github&logoColor=white)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
 <br>
 
 **Syntax to silicon, demystified.**  
@@ -15,10 +16,6 @@
 <img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Assembler Output" width="800">
 
 <sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>  
-
-<br>
-
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
 
 </div>
 
