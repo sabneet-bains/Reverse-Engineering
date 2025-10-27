@@ -15,7 +15,7 @@
 
 <sup>*A modular Python toolkit that transforms low-level instructions into high-level insight — bridging language, logic, and hardware.*</sup>
 
-<img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Assembler Output" width="800">
+<img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.png" alt="Assembler Output" width="800">
 
 </div>
 
