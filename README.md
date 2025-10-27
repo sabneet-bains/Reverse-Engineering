@@ -51,7 +51,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -70,7 +70,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -95,7 +95,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -113,7 +113,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -162,7 +162,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -179,7 +179,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -199,7 +199,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -214,7 +214,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -226,7 +226,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
@@ -251,7 +251,7 @@ Please maintain a respectful and collaborative tone in all interactions.
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
 
