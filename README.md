@@ -2,23 +2,25 @@
 
 # 🛠️ Reverse Engineering — MIPS Assembler & Disassembler  
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
-[![Architecture](https://img.shields.io/badge/Focus-MIPS32%2F64-lightgrey?logo=microchip&logoColor=white)](#)
-[![Domain](https://img.shields.io/badge/Reverse_Engineering-orange?logo=github&logoColor=white)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
+[![Python](https://img.shields.io/badge/Python-3.9%2B-528ec5?logo=python&logoColor=white&labelColor=0d1117&style=flat)](https://www.python.org/)
+[![Focus](https://img.shields.io/badge/Focus-MIPS32%2F64-ec457b?logo=codeforces&logoColor=white&labelColor=0d1117&style=flat)](#)
+[![Domain](https://img.shields.io/badge/Reverse_Engineering-8E44AD?logo=github&logoColor=white&labelColor=0d1117&style=flat)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ECC71?labelColor=0d1117&style=flat)](https://choosealicense.com/licenses/mit/)
+
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
-<br>
+
 
 **Syntax to silicon, demystified.**  
+
 <sup>*A modular Python toolkit that transforms low-level instructions into high-level insight — bridging language, logic, and hardware.*</sup>
 
 <img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Assembler Output" width="800">
 
-<sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>  
-
 </div>
 
+> [!NOTE]
+> <sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>
 
 
 ## 🧭 Table of Contents
@@ -34,6 +36,7 @@
 - [Contributing](#-contributing)
 - [Author](#-author)
 - [License](#-license)
+  
 
 
 ## 📘 Overview  
@@ -48,7 +51,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -67,7 +70,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -92,7 +95,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -110,7 +113,7 @@ Reverse-Engineering/
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -159,7 +162,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -176,7 +179,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -196,7 +199,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -211,7 +214,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -223,7 +226,7 @@ lw $t1, 8($t2)
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -248,7 +251,7 @@ Please maintain a respectful and collaborative tone in all interactions.
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-BACK_TO_TOP-2b2b2b)](#readme-top)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
