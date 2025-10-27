@@ -9,12 +9,14 @@
 
 <br>
 
-**Educational clarity × Professional precision**  
-*A modular Python toolkit that reveals how assembly instructions become machine logic—bridging syntax, semantics, and silicon.*
+**Syntax to silicon, demystified.**  
+<sup>*A modular Python toolkit that transforms low-level instructions into high-level insight — bridging language, logic, and hardware.*</sup>
 
 <img src="https://github.com/sabneet95/Reverse-Engineering/blob/master/output.jpg" alt="Assembler Output" width="800">
 
-<sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>
+<sup>Part of the <b>Foundational & Academic</b> collection: educational tools designed with engineering rigor.</sup>  
+
+<br>
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
 
