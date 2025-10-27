@@ -51,7 +51,7 @@ It translates assembly instructions into binary machine code — and back — al
 
 <div align="right">
 
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](https://choosealicense.com/licenses/mit/)
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](readme-top)
 
 </div>
 
