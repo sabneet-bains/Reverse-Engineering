@@ -84,7 +84,8 @@ Reverse-Engineering/
 ├── disassembler.py     # Binary → Assembly decoder
 ├── opcode_tables/      # Mnemonics & function maps
 ├── examples/           # Round-trip tests and cases
-└── README.md
+├── LICENSE             # MIT License
+└── README.md           # Project overview, usage, and documentation
 ```
 
 **Core Components**
