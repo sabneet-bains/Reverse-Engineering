@@ -14,8 +14,6 @@
 
 <sup><i>A focused Python toolkit that assembles, disassembles, and explains MIPS32/64 instruction encodings at the bitfield level.</i></sup>
 
-<br><br>
-
 <img src="assets/hero-bitfield.svg" alt="Assembly instruction flowing into MIPS bitfields and machine code" width="94%">
 
 </div>
