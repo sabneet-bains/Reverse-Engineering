@@ -16,15 +16,19 @@
 
 <br><br>
 
-<img src="assets/hero-bitfield.svg" alt="Assembly instruction flowing into MIPS bitfields and machine code" width="100%">
+<img src="assets/hero-bitfield.svg" alt="Assembly instruction flowing into MIPS bitfields and machine code" width="94%">
 
 </div>
+
+<br>
 
 > [!NOTE]
 > <sup>Part of the <b>Foundational & Systems</b> collection: compact engineering projects built to make low-level computing inspectable.</sup>
 
 > [!IMPORTANT]
 > This is a showcase-quality educational assembler/disassembler, not a complete vendor-manual MIPS implementation. Unsupported instructions fail with clear errors instead of producing misleading output.
+
+<br>
 
 ## 🧭 Navigation
 
@@ -34,6 +38,8 @@
 | **Run it quickly** | [Try It in 30 Seconds](#-try-it-in-30-seconds) | Copy-pasteable CLI commands with real output |
 | **Learn the encoding** | [How MIPS Encoding Works](#-how-mips-encoding-works) | R/I/J instruction anatomy explained from first principles |
 | **Inspect the design** | [Architecture & Design](#️-architecture--design) | Package structure, data flow, tests, and extension path |
+
+<br>
 
 ## 🏆 Project Highlights
 
@@ -66,6 +72,8 @@ This project turns a low-level machine-code concept into a working, testable, ex
 [![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
+
+<br>
 
 ## ⚡ Try It in 30 Seconds
 
@@ -141,13 +149,23 @@ rt         20:16  00010             $v0
 immediate  15:0   0000000000000100  4
 ```
 
-<img src="assets/terminal-walkthrough.svg" alt="Terminal walkthrough output for addi instruction encoding" width="100%">
+<br>
+
+<div align="center">
+
+<img src="assets/terminal-walkthrough.svg" alt="Terminal walkthrough output for addi instruction encoding" width="94%">
+
+</div>
+
+<br>
 
 <div align="right">
 
 [![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
+
+<br>
 
 ## 🧩 How MIPS Encoding Works
 
@@ -217,6 +235,8 @@ opcode  address
 [![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
+
+<br>
 
 ## ⚙️ Architecture & Design
 
@@ -300,6 +320,8 @@ The reverse path uses `decoder.py`, `decode_r/i/...`, and `word.py` to extract f
 
 </div>
 
+<br>
+
 ## 📌 Supported Scope
 
 | Area | Current Support |
@@ -370,6 +392,8 @@ error: expected memory operand offset(base), got: $sp
 [![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
 
 </div>
+
+<br>
 
 ## 👩‍💻 Library API & Examples
 
@@ -450,6 +474,8 @@ b start -> beq $zero, $zero, -5
 
 </div>
 
+<br>
+
 ## ✅ Testing & Verification
 
 Install with development dependencies:
@@ -495,6 +521,8 @@ python tools/benchmark.py --quick
 - Public API return shape and pseudo-instruction metadata.
 - Benchmark script smoke coverage.
 - Clear failures for unsupported or malformed input.
+
+<br>
 
 <div align="center">
 
