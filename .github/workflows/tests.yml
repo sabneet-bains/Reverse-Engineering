@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m ruff check .
+      - run: python -m mypy mips_tool tools
+      - run: python -m compileall mips_tool tests tools
+      - run: python -m pytest
+      - run: python -m build
+      - run: python -m mips_tool assemble 'addi $v0, $zero, 4'
+      - run: python -m mips_tool disassemble 00100000000000100000000000000100
+      - run: python -m mips_tool explain 'ld $t0, 16($sp)'
+      - run: python -m mips_tool walkthrough 'addi $v0, $zero, 4'

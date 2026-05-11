@@ -1,0 +1,20 @@
+command: python -m mips_tool walkthrough 'addi $v0, $zero, 4'
+
+input:     addi $v0, $zero, 4
+kind:      assembly
+mnemonic:  addi
+operands:  $v0, $zero, 4
+form:      I-type / i_rt_rs_imm
+table:     opcode=0x08, kind=i_rt_rs_imm
+pack:      pack_i(opcode, rs, rt, immediate)
+assembly:  addi $v0, $zero, 4
+binary:    00100000000000100000000000000100
+hex:       0x20020004
+
+bitfields:
+Field      Bits   Binary            Meaning
+-----      ----   ------            -------
+opcode     31:26  001000            addi
+rs         25:21  00000             $zero
+rt         20:16  00010             $v0
+immediate  15:0   0000000000000100  4

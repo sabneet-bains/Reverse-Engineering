@@ -1,0 +1,90 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MIPS bitfield encoder and decoder hero diagram</title>
+  <desc id="desc">Assembly text flows into MIPS instruction fields and produces binary and hexadecimal machine code.</desc>
+  <defs>
+    <linearGradient id="panel" x1="80" y1="60" x2="1120" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="0.62" stop-color="#111827"/>
+      <stop offset="1" stop-color="#10151F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="170" y1="105" x2="1030" y2="455" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#528EC5"/>
+      <stop offset="0.48" stop-color="#8E44AD"/>
+      <stop offset="1" stop-color="#2ECC71"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#72B7F2"/>
+      <stop offset="1" stop-color="#528EC5"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#EC6EA5"/>
+      <stop offset="1" stop-color="#8E44AD"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#65E6A2"/>
+      <stop offset="1" stop-color="#2ECC71"/>
+    </linearGradient>
+    <filter id="shadow" x="40" y="25" width="1120" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="560" fill="#0B1020"/>
+  <g filter="url(#shadow)">
+    <rect x="80" y="60" width="1040" height="440" rx="18" fill="url(#panel)" stroke="#253044"/>
+  </g>
+  <rect x="80" y="60" width="1040" height="6" rx="3" fill="url(#accent)"/>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="130" y="128" fill="#F8FAFC" font-size="34" font-weight="800">Syntax to silicon, demystified.</text>
+    <text x="132" y="160" fill="#94A3B8" font-size="16">MIPS32/64 assembly, binary machine words, and inspectable bitfields.</text>
+  </g>
+
+  <g font-family="Consolas, Menlo, monospace">
+    <rect x="130" y="205" width="390" height="116" rx="12" fill="#0B1220" stroke="#273449"/>
+    <circle cx="156" cy="230" r="6" fill="#EC457B"/>
+    <circle cx="176" cy="230" r="6" fill="#F6C85F"/>
+    <circle cx="196" cy="230" r="6" fill="#2ECC71"/>
+    <text x="152" y="270" fill="#7DD3FC" font-size="18">$ python -m mips_tool explain</text>
+    <text x="152" y="300" fill="#E5E7EB" font-size="20">'ld $t0, 16($sp)'</text>
+
+    <path d="M550 264 H650" stroke="#64748B" stroke-width="2.5"/>
+    <path d="M650 264 L636 254 M650 264 L636 274" stroke="#64748B" stroke-width="2.5" stroke-linecap="round"/>
+
+    <rect x="680" y="186" width="390" height="154" rx="12" fill="#0B1220" stroke="#273449"/>
+    <text x="708" y="224" fill="#CBD5E1" font-size="16">format: I-type</text>
+    <text x="708" y="252" fill="#CBD5E1" font-size="16">layout: opcode rs rt immediate</text>
+    <text x="708" y="288" fill="#A7F3D0" font-size="16">hex: 0xDFA80010</text>
+    <text x="708" y="316" fill="#E5E7EB" font-size="16">11011111101010000000000000010000</text>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">
+    <rect x="130" y="378" width="150" height="58" rx="10" fill="url(#blue)"/>
+    <text x="156" y="402" fill="#08111F">opcode</text>
+    <text x="156" y="424" fill="#08111F" font-family="Consolas, Menlo, monospace">110111</text>
+
+    <rect x="292" y="378" width="130" height="58" rx="10" fill="#1F2937" stroke="#528EC5"/>
+    <text x="324" y="402" fill="#E0F2FE">rs</text>
+    <text x="318" y="424" fill="#BAE6FD" font-family="Consolas, Menlo, monospace">11101</text>
+
+    <rect x="434" y="378" width="130" height="58" rx="10" fill="#1F2937" stroke="#8E44AD"/>
+    <text x="466" y="402" fill="#F5D0FE">rt</text>
+    <text x="460" y="424" fill="#F0ABFC" font-family="Consolas, Menlo, monospace">01000</text>
+
+    <rect x="576" y="378" width="300" height="58" rx="10" fill="url(#pink)"/>
+    <text x="672" y="402" fill="#FDF2F8">immediate</text>
+    <text x="644" y="424" fill="#FDF2F8" font-family="Consolas, Menlo, monospace">0000000000010000</text>
+
+    <rect x="888" y="378" width="182" height="58" rx="10" fill="url(#green)"/>
+    <text x="934" y="402" fill="#052E16">meaning</text>
+    <text x="936" y="424" fill="#052E16" font-family="Consolas, Menlo, monospace">ld $t0, 16($sp)</text>
+  </g>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13">
+    <text x="132" y="470" fill="#64748B">opcode</text>
+    <text x="292" y="470" fill="#64748B">base register</text>
+    <text x="434" y="470" fill="#64748B">target register</text>
+    <text x="576" y="470" fill="#64748B">signed offset</text>
+    <text x="888" y="470" fill="#64748B">canonical assembly</text>
+  </g>
+</svg>

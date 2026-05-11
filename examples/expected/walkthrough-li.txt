@@ -1,0 +1,46 @@
+command: python -m mips_tool walkthrough 'li $t0, 0x12345678'
+
+input:     li $t0, 0x12345678
+kind:      pseudo-instruction
+
+expansion:
+  1. lui $at, 4660
+  2. ori $t0, $at, 22136
+
+input:     lui $at, 4660
+kind:      expanded
+mnemonic:  lui
+operands:  $at, 4660
+form:      I-type / lui
+table:     opcode=0x0F, kind=lui
+pack:      pack_i(opcode, rs, rt, immediate)
+assembly:  lui $at, 4660
+binary:    00111100000000010001001000110100
+hex:       0x3C011234
+
+bitfields:
+Field      Bits   Binary            Meaning
+-----      ----   ------            -------
+opcode     31:26  001111            lui
+rs         25:21  00000             $zero
+rt         20:16  00001             $at
+immediate  15:0   0001001000110100  4660
+
+input:     ori $t0, $at, 22136
+kind:      expanded
+mnemonic:  ori
+operands:  $t0, $at, 22136
+form:      I-type / i_rt_rs_imm
+table:     opcode=0x0D, kind=i_rt_rs_imm
+pack:      pack_i(opcode, rs, rt, immediate)
+assembly:  ori $t0, $at, 22136
+binary:    00110100001010000101011001111000
+hex:       0x34285678
+
+bitfields:
+Field      Bits   Binary            Meaning
+-----      ----   ------            -------
+opcode     31:26  001101            ori
+rs         25:21  00001             $at
+rt         20:16  01000             $t0
+immediate  15:0   0101011001111000  22136

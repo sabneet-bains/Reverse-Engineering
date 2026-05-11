@@ -1,0 +1,32 @@
+<svg width="1120" height="520" viewBox="0 0 1120 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Terminal walkthrough for a MIPS instruction</title>
+  <desc id="desc">A deterministic terminal transcript showing an addi instruction parsed into fields, binary, and hex.</desc>
+  <rect width="1120" height="520" rx="18" fill="#0D1117"/>
+  <rect x="1" y="1" width="1118" height="518" rx="17" stroke="#30363D" stroke-width="2"/>
+
+  <circle cx="34" cy="34" r="7" fill="#FF5F56"/>
+  <circle cx="58" cy="34" r="7" fill="#FFBD2E"/>
+  <circle cx="82" cy="34" r="7" fill="#27C93F"/>
+  <text x="106" y="40" fill="#8B949E" font-family="Consolas, Menlo, monospace" font-size="18">mips-tool walkthrough</text>
+
+  <text x="40" y="92" fill="#7EE787" font-family="Consolas, Menlo, monospace" font-size="22">$ python -m mips_tool walkthrough 'addi $v0, $zero, 4'</text>
+
+  <text x="40" y="142" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">input:     addi $v0, $zero, 4</text>
+  <text x="40" y="176" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">mnemonic:  addi</text>
+  <text x="40" y="210" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">form:      I-type / i_rt_rs_imm</text>
+  <text x="40" y="244" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">pack:      pack_i(opcode, rs, rt, immediate)</text>
+
+  <rect x="40" y="284" width="1040" height="92" rx="10" fill="#161B22" stroke="#30363D"/>
+  <text x="66" y="322" fill="#8B949E" font-family="Consolas, Menlo, monospace" font-size="18">opcode</text>
+  <text x="208" y="322" fill="#8B949E" font-family="Consolas, Menlo, monospace" font-size="18">rs</text>
+  <text x="332" y="322" fill="#8B949E" font-family="Consolas, Menlo, monospace" font-size="18">rt</text>
+  <text x="480" y="322" fill="#8B949E" font-family="Consolas, Menlo, monospace" font-size="18">immediate</text>
+
+  <text x="66" y="352" fill="#79C0FF" font-family="Consolas, Menlo, monospace" font-size="24">001000</text>
+  <text x="208" y="352" fill="#FFA657" font-family="Consolas, Menlo, monospace" font-size="24">00000</text>
+  <text x="332" y="352" fill="#FFA657" font-family="Consolas, Menlo, monospace" font-size="24">00010</text>
+  <text x="480" y="352" fill="#D2A8FF" font-family="Consolas, Menlo, monospace" font-size="24">0000000000000100</text>
+
+  <text x="40" y="426" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">binary:    00100000000000100000000000000100</text>
+  <text x="40" y="462" fill="#F0F6FC" font-family="Consolas, Menlo, monospace" font-size="20">hex:       0x20020004</text>
+</svg>

@@ -1,0 +1,14 @@
+command: python -m mips_tool explain 'ld $t0, 16($sp)'
+
+assembly: ld $t0, 16($sp)
+format:   I-type
+layout:   opcode rs rt immediate
+binary:   11011111101010000000000000010000
+hex:      0xDFA80010
+
+Field      Bits   Value             Meaning
+-----      ----   -----             -------
+opcode     31:26  110111            ld
+rs         25:21  11101             $sp
+rt         20:16  01000             $t0
+immediate  15:0   0000000000010000  16
