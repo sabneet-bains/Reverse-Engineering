@@ -72,15 +72,15 @@
     <text x="726" y="418" fill="#FDF2F8" font-family="Consolas, Menlo, monospace">0000000000010000</text>
 
     <rect x="888" y="372" width="182" height="58" rx="10" fill="url(#green)"/>
-    <text x="979" y="396" fill="#052E16">meaning</text>
+    <text x="979" y="396" fill="#052E16">decoded</text>
     <text x="979" y="418" fill="#052E16" font-family="Consolas, Menlo, monospace">ld $t0, 16($sp)</text>
   </g>
 
   <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">
-    <text x="205" y="464" fill="#64748B">opcode</text>
-    <text x="357" y="464" fill="#64748B">base register</text>
-    <text x="499" y="464" fill="#64748B">target register</text>
-    <text x="726" y="464" fill="#64748B">signed offset</text>
+    <text x="205" y="464" fill="#64748B">opcode 31:26</text>
+    <text x="357" y="464" fill="#64748B">base register 25:21</text>
+    <text x="499" y="464" fill="#64748B">target register 20:16</text>
+    <text x="726" y="464" fill="#64748B">signed offset 15:0</text>
     <text x="979" y="464" fill="#64748B">canonical assembly</text>
   </g>
 </svg>

@@ -8,8 +8,6 @@
 [![Tests](https://img.shields.io/badge/Tests-pytest-2ECC71?labelColor=0d1117&style=flat)](#-testing--verification)
 [![License: MIT](https://img.shields.io/badge/License-MIT-2ECC71?labelColor=0d1117&style=flat)](LICENSE)
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sabneet-bains/Reverse-Engineering)
-
 **Syntax to silicon, demystified.**
 
 <sup><i>A focused Python toolkit that assembles, disassembles, and explains MIPS32/64 instruction encodings at the bitfield level.</i></sup>
@@ -20,11 +18,18 @@
 
 <br>
 
-> [!NOTE]
-> <sup>Part of the <b>Foundational & Systems</b> collection: compact engineering projects built to make low-level computing inspectable.</sup>
+Start with one instruction:
+
+```bash
+python -m mips_tool walkthrough 'addi $v0, $zero, 4'
+```
+
+<sub>The walkthrough follows real parser, table lookup, field packing, binary, and hex output.</sub>
+
+<br>
 
 > [!IMPORTANT]
-> This is a showcase-quality educational assembler/disassembler, not a complete vendor-manual MIPS implementation. Unsupported instructions fail with clear errors instead of producing misleading output.
+> This is an educational MIPS32/64 toolkit, not a complete vendor-manual implementation. Unsupported instructions fail with clear errors instead of producing misleading output.
 
 <br>
 
@@ -48,7 +53,7 @@ This project turns a low-level machine-code concept into a working, testable, ex
 | **Systems fundamentals** | Encodes and decodes MIPS instruction formats, registers, immediates, jumps, branches, and memory operands |
 | **Bit-level reasoning** | Uses explicit field extraction, packing, masking, sign extension, and canonical formatting |
 | **Software design** | Separates parser, tables, encoder, decoder, bitfield explainer, CLI, and tests |
-| **User empathy** | Provides novice-friendly explanations plus advanced library/CLI workflows |
+| **Explainable output** | Provides novice-friendly walkthroughs plus advanced library/CLI workflows |
 | **Engineering rigor** | Includes examples, pytest coverage, CI, and clear unsupported-input errors |
 
 > [!TIP]
@@ -65,15 +70,11 @@ This project turns a low-level machine-code concept into a working, testable, ex
 | **Collected tests** | 65 |
 | **CI** | GitHub Actions runs lint, typing, compile, tests, package build, and CLI smoke checks |
 
-<div align="right">
-
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
-
-</div>
-
 <br>
 
 ## ⚡ Try It in 30 Seconds
+
+Use a local checkout or [open the project in GitHub Codespaces](https://codespaces.new/sabneet-bains/Reverse-Engineering). One instruction can be assembled, decoded, explained, and walked through without leaving the terminal.
 
 ### 1. Assemble
 
@@ -149,11 +150,20 @@ immediate  15:0   0000000000000100  4
 
 <br>
 
+<details>
+<summary>Show terminal walkthrough visual</summary>
+
+<br>
+
 <div align="center">
 
-<img src="assets/terminal-walkthrough.svg" alt="Terminal walkthrough output for addi instruction encoding" width="94%">
+<img src="assets/terminal-walkthrough.svg" alt="Terminal walkthrough output for addi instruction encoding" width="86%">
 
 </div>
+
+<br>
+
+</details>
 
 <br>
 
@@ -227,12 +237,6 @@ opcode  address
 
 > [!NOTE]
 > The implementation keeps this grammar visible through a named `InstructionWord` view: `opcode`, `rs`, `rt`, `rd`, `shamt`, `funct`, `immediate`, and `address`.
-
-<div align="right">
-
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
-
-</div>
 
 <br>
 
@@ -312,12 +316,6 @@ explain.py / cli.py render user-facing output
 
 The reverse path uses `decoder.py`, `decode_r/i/...`, and `word.py` to extract fields from a 32-bit word and reconstruct canonical assembly.
 
-<div align="right">
-
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
-
-</div>
-
 <br>
 
 ## 📌 Supported Scope
@@ -385,15 +383,9 @@ python -m mips_tool assemble 'lw $t0, $sp'
 error: expected memory operand offset(base), got: $sp
 ```
 
-<div align="right">
-
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
-
-</div>
-
 <br>
 
-## 👩‍💻 Library API & Examples
+## Library API & Examples
 
 ### Library API
 
@@ -429,6 +421,11 @@ Pseudo-instructions show their real expansion:
 python -m mips_tool assemble examples/pseudo.asm --format both
 ```
 
+<details>
+<summary>Show pseudo-instruction expansion output</summary>
+
+<br>
+
 ```text
 li $t0, 0x12345678 -> lui $at, 4660
 00111100000000010001001000110100
@@ -446,6 +443,8 @@ b start -> beq $zero, $zero, -5
 00010000000000001111111111111011
 0x1000FFFB
 ```
+
+</details>
 
 ### Extending the Tool
 
@@ -466,15 +465,9 @@ b start -> beq $zero, $zero, -5
 - [Contributing](CONTRIBUTING.md) keeps instruction additions small, tested, and explicit.
 - [Changelog](CHANGELOG.md) records the current release shape.
 
-<div align="right">
-
-[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
-
-</div>
-
 <br>
 
-## ✅ Testing & Verification
+## Testing & Verification
 
 Install with development dependencies:
 
@@ -500,7 +493,10 @@ Run a lightweight local benchmark:
 python tools/benchmark.py --quick
 ```
 
-**Covered Scenarios**
+<details>
+<summary>Show covered scenarios</summary>
+
+<br>
 
 - R/I/J instruction encoding and decoding.
 - MIPS64 representative instructions.
@@ -520,11 +516,21 @@ python tools/benchmark.py --quick
 - Benchmark script smoke coverage.
 - Clear failures for unsupported or malformed input.
 
+</details>
+
+<br>
+
+<div align="right">
+
+[![Back to Top](https://img.shields.io/badge/-⫛_TO_TOP-0d1117?style=flat)](#readme-top)
+
+</div>
+
 <br>
 
 <div align="center">
 
-## 👤 Author
+## Author
 
 **Sabneet Bains**
 
@@ -532,7 +538,7 @@ python tools/benchmark.py --quick
 
 [LinkedIn](https://www.linkedin.com/in/sabneet-bains/) • [GitHub](https://github.com/sabneet-bains)
 
-## 📄 License
+## License
 
 Licensed under the [MIT License](LICENSE).
 
